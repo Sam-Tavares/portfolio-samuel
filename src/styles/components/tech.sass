@@ -1,0 +1,35 @@
+@use '../variables'
+
+.grid
+    margin-top: 1rem
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 1rem
+
+    @media screen and (max-width: 1400px)
+        margin: 4rem 2rem 0 2rem
+        grid-template-columns: repeat(1 , 1fr)
+
+    .tech-card
+        padding: 4px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        border: 1px solid variables.$text-color
+
+        svg
+            font-size: 60px
+            color: variables.$text-color
+            margin: 4px
+
+        .desc
+            flex-direction: column
+            margin-left: 4px
+            width: 75%
+
+            h3
+                color: variables.$text-color
+
+            p
+                font-size: 15px
+                color: variables.$text-color

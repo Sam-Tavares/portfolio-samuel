@@ -1,0 +1,75 @@
+@use '../variables'
+
+#main-content
+    border-radius: variables.$bd-radius-primary
+    flex: 2 1 0
+    max-width: 1000px
+    height: 500px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    @media screen and (max-width: 1400px)
+        max-width: 400px
+        align-items: flex-start
+        justify-content: start
+
+.card-info
+    display: flex
+    flex-direction: column
+    position: relative
+    padding: 15px
+    border: 4px solid transparent
+    border-radius: 15px
+    border-bottom-color: variables.$bg-color-secundary
+    border-top-color: variables.$bg-color-secundary
+    margin-bottom: 1rem
+    display: none
+
+    @keyframes open
+        0%
+            height: 0px
+
+        20%
+            height: 0px
+
+        100%
+            height: 500px
+
+    @keyframes close
+        0%
+            height: 500px
+
+        90%
+            height: 0px
+
+        100%
+            height: 0px
+
+    .content
+        height: 500px
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        overflow: hidden
+        animation-name: open
+        animation-duration: 2s
+        color: variables.$text-color
+
+        @media screen and (max-width: 1400px)
+            overflow: auto
+
+    h1
+        color: variables.$text-color
+        display: flex
+        gap: 1rem
+
+        &:after
+            content: ""
+            align-self: center
+            background: variables.$gradient-secundary
+            height: 3px
+            width: 45%

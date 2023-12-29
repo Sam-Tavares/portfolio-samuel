@@ -1,0 +1,97 @@
+@use '../variables'
+
+#side-bar
+    height: 400px
+    max-width: 400px
+    background-color: variables.$bg-color
+    flex: 1 1 0
+    border-radius: variables.$bd-radius-primary
+    position: relative
+    display: flex
+    flex-direction: column
+
+    img
+        height: 14rem
+        border-radius: variables.$bd-radius-primary
+        position: absolute
+        top: -2rem
+        left: -1rem
+
+    h1
+        background: variables.$gradient-secundary
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        font-size: 48px
+        text-align: end
+        margin-right: 1.5rem
+        margin-left: 32%
+        margin-top: 1rem
+
+    .redes
+        display: flex
+        justify-content: space-between
+        font-size: 35px
+        margin-right: 1.5rem
+        margin-left: 50%
+        margin-top: 1.4rem
+
+    svg
+        padding: 5px
+        border: 2px solid
+        border-radius: variables.$bd-radius-secundary
+        color: variables.$text-color
+
+    #github
+        svg
+            background-color: #111
+        :hover
+            background-color: variables.$text-color
+            color: #111
+
+    #instagram
+        svg
+            background-color: #BC2A8B
+        :hover
+            background-color: variables.$text-color
+            color: #BC2A8B
+
+    #linkedin
+        svg
+            background-color: #0072B1
+
+        :hover
+            background-color: variables.$text-color
+            color: #0072B1
+
+    .infos
+        color: variables.$text-color
+        margin: 0.8rem
+        border-bottom: 1px solid variables.$text-color
+        padding-bottom: .2rem
+
+.btn-opt
+    height: 40px
+    display: flex
+    gap: 10px
+    justify-content: center
+    align-items: center
+    margin-top: 1rem
+    margin-bottom: 1rem
+    font-size: 20px
+
+    a
+        text-decoration: none
+        padding: 4px
+        color: variables.$text-color
+        font-weight: bold
+        flex: 1
+        text-align: center
+        border-radius: variables.$bd-radius-secundary
+        border-bottom: 2px solid variables.$bg-color-secundary
+        border-top: 2px solid variables.$bg-color-secundary
+        transition: .4s
+        cursor: pointer
+
+        &:hover
+            padding-top: 10px
+            padding-bottom: 10px

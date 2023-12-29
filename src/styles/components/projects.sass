@@ -1,0 +1,85 @@
+@use '../variables'
+
+.projs
+    p
+        line-height: 1.4rem
+
+.projetos-wrapper
+    height: 100%
+    overflow: hidden
+
+    .projetos
+        display: flex
+        align-items: center
+        flex-flow: row nowrap
+        gap: 10px
+        height: 100%
+        width: 700px
+
+        @media screen and (max-width: 1400px)
+            width: 300px
+
+        .proj
+            min-width: 700px
+            display: flex
+            opacity: 0.6
+            position: relative
+
+            @media screen and (max-width: 1400px)
+                min-width: 300px
+                height: 200px
+                font-size: 15px
+
+            img
+                width: 40%
+                border-radius: variables.$bd-radius-secundary
+                margin-right: 5px
+
+                @media screen and (max-width: 1400px)
+                    display: none
+
+            h3
+                color: variables.$text-color
+
+            svg
+                margin-top: 10px
+                margin-right: 40px
+                font-size: 38px
+                padding: 5px
+                border: 1px solid variables.$text-color
+                border-radius: 30%
+                color: variables.$text-color
+
+                &:hover
+                    background: variables.$text-color
+                    color: variables.$bg-color-secundary
+
+        .selected
+            opacity: 1
+
+    .control
+        position: absolute
+        top: 30%
+        bottom: 20%
+        font-size: 30px
+        border: none
+        cursor: pointer
+        color: variables.$text-color
+        transition: all .4s ease-in-out
+        border-radius: variables.$bd-radius-primary
+
+        @media screen and (max-width: 1400px)
+            top: 40%
+            bottom: 2%
+
+        &:hover
+            opacity: 70%
+            background: variables.$bg-color-secundary
+
+    .arrow-left
+        left: 0
+        background: variables.$gradient-btn-left
+
+    .arrow-right
+        right: 0
+        background: variables.$gradient-btn-right
