@@ -60,7 +60,7 @@ const Projects = () => {
 
     const projects = [
         {name:"UMP - Vila Buenos Aires",
-        img: "../img/ump.png",
+        img: "https://github.com/Sam-Tavares/portfolio-samuel/blob/main/src/img/ump.png",
         desc:"Projeto de gerenciamento de grupo, permite o cadastro e controle de Membros, Eventos, Fluxo de Caixa e um pequeno sistema de Restaurante.", 
         tech:"Laravel PHP (Back-end), Bootstrap (Front-end)", 
         link1:"https://dgfly.com.br", link2:"https://github.com/Sam-Tavares/ump-ipvba"},
